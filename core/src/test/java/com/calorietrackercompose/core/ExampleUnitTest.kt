@@ -1,4 +1,4 @@
-package com.calorytrackercompose.core
+package com.calorietrackercompose.core
 
 import org.junit.Test
 
