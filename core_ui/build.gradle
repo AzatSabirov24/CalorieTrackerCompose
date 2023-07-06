@@ -1,0 +1,11 @@
+apply {
+    from("$rootDir/compose-module.gradle")
+}
+
+android {
+    namespace = "com.calorietrackercompose.core_ui"
+}
+
+dependencies {
+
+}

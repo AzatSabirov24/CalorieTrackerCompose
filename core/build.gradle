@@ -1,6 +1,7 @@
 apply {
     from("$rootDir/base-module.gradle")
 }
+apply plugin: 'org.jetbrains.kotlin.android'
 
 android {
     namespace = "com.calorietrackercompose.core"
