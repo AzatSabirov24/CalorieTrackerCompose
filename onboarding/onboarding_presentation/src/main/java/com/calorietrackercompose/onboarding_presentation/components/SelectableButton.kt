@@ -27,21 +27,22 @@ fun SelectableButton(
     modifier: Modifier = Modifier,
     textStyle: TextStyle = MaterialTheme.typography.button
 ) {
+    val spacing = LocalSpacing.current
     Box(
         contentAlignment = Alignment.Center,
         modifier = modifier
             .clip(RoundedCornerShape(100.dp))
-            .padding(LocalSpacing.current.spaceMedium)
             .border(
                 width = 2.dp,
                 color = color,
                 shape = RoundedCornerShape(100.dp)
             )
+            .clickable { onClick() }
             .background(
                 color = if (isSelected) color else Color.Transparent,
                 shape = RoundedCornerShape(100.dp)
             )
-            .clickable { onClick }
+            .padding(spacing.spaceMedium)
     ) {
         Text(
             text = text,
