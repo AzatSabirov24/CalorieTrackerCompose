@@ -16,6 +16,7 @@ import com.calorietrackercompose.navigation.navigate
 import com.calorietrackercompose.onboarding_presentation.activity.ActivityScreen
 import com.calorietrackercompose.onboarding_presentation.age.AgeScreen
 import com.calorietrackercompose.onboarding_presentation.gender.GenderScreen
+import com.calorietrackercompose.onboarding_presentation.goal.GoalScreen
 import com.calorietrackercompose.onboarding_presentation.height.HeightScreen
 import com.calorietrackercompose.onboarding_presentation.weight.WeightScreen
 import com.calorietrackercompose.onboarding_presentation.welcome.WelcomeScreen
@@ -71,7 +72,7 @@ class MainActivity : ComponentActivity() {
                             ActivityScreen(onNavigate = navController::navigate)
                         }
                         composable(Route.GOAL) {
-
+                            GoalScreen(onNavigate = navController::navigate)
                         }
                         composable(Route.TRACKER_OVERVIEW) {
 
