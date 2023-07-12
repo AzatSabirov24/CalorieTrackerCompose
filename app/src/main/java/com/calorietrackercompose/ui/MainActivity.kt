@@ -13,6 +13,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.calorietrackercompose.core.navigation.Route
 import com.calorietrackercompose.navigation.navigate
+import com.calorietrackercompose.onboarding_presentation.activity.ActivityScreen
 import com.calorietrackercompose.onboarding_presentation.age.AgeScreen
 import com.calorietrackercompose.onboarding_presentation.gender.GenderScreen
 import com.calorietrackercompose.onboarding_presentation.height.HeightScreen
@@ -67,7 +68,7 @@ class MainActivity : ComponentActivity() {
                             GenderScreen(onNavigate = navController::navigate)
                         }
                         composable(Route.ACTIVITY) {
-
+                            ActivityScreen(onNavigate = navController::navigate)
                         }
                         composable(Route.GOAL) {
 
