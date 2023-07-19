@@ -54,7 +54,7 @@ fun GoalScreen(
         ) {
             Text(
                 text = stringResource(
-                    id = R.string.whats_your_gender
+                    id = R.string.your_goal
                 ),
                 style = MaterialTheme.typography.h3
             )

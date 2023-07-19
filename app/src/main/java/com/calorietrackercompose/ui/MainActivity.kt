@@ -18,6 +18,7 @@ import com.calorietrackercompose.onboarding_presentation.age.AgeScreen
 import com.calorietrackercompose.onboarding_presentation.gender.GenderScreen
 import com.calorietrackercompose.onboarding_presentation.goal.GoalScreen
 import com.calorietrackercompose.onboarding_presentation.height.HeightScreen
+import com.calorietrackercompose.onboarding_presentation.nutrient_goal.NutrientGoalScreen
 import com.calorietrackercompose.onboarding_presentation.weight.WeightScreen
 import com.calorietrackercompose.onboarding_presentation.welcome.WelcomeScreen
 import com.calorietrackercompose.ui.theme.CaloryTrackerTheme
@@ -63,7 +64,10 @@ class MainActivity : ComponentActivity() {
                             )
                         }
                         composable(Route.NUTRIENT_GOAL) {
-
+                            NutrientGoalScreen(
+                                scaffoldState = scaffoldState,
+                                onNavigate = navController::navigate
+                            )
                         }
                         composable(Route.GENDER) {
                             GenderScreen(onNavigate = navController::navigate)

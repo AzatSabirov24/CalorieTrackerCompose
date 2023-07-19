@@ -54,7 +54,7 @@ fun ActivityScreen(
         ) {
             Text(
                 text = stringResource(
-                    id = R.string.whats_your_gender
+                    id = R.string.whats_your_activity_level
                 ),
                 style = MaterialTheme.typography.h3
             )
