@@ -1,5 +1,6 @@
-package com.calorietrackercompose.onboarding_domain.use_case
+package com.calorietrackercompose.onboarding_domain.di
 
+import com.calorietrackercompose.onboarding_domain.use_case.ValidateNutrients
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

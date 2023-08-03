@@ -1,6 +1,11 @@
 package com.calorietrackercompose.tracker_data.di
 
+import android.app.Application
+import androidx.room.Room
+import com.calorietrackercompose.tracker_data.local.database.TrackerDatabase
 import com.calorietrackercompose.tracker_data.remote.OpenFoodApi
+import com.calorietrackercompose.tracker_data.repository.TrackerRepositoryImpl
+import com.calorietrackercompose.tracker_domain.repository.TrackerRepository
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -37,5 +42,27 @@ object TrackerDataModule {
             .client(client)
             .build()
             .create()
+    }
+
+    @Provides
+    @Singleton
+    fun provideTrackerDatabase(app: Application): TrackerDatabase {
+        return Room.databaseBuilder(
+            app,
+            TrackerDatabase::class.java,
+            "tracker_db"
+        ).build()
+    }
+
+    @Provides
+    @Singleton
+    fun providesTrackerRepository(
+        db: TrackerDatabase,
+        api: OpenFoodApi
+    ): TrackerRepository {
+        return TrackerRepositoryImpl(
+            dao = db.dao,
+            api = api
+        )
     }
 }

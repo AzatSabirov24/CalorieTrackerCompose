@@ -7,8 +7,15 @@ import androidx.compose.material.lightColors
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.ui.graphics.Color
+import com.calorietrackercompose.core_ui.BrightGreen
+import com.calorietrackercompose.core_ui.DarkGray
+import com.calorietrackercompose.core_ui.DarkGreen
 import com.calorietrackercompose.core_ui.Dimensions
+import com.calorietrackercompose.core_ui.LightGray
 import com.calorietrackercompose.core_ui.LocalSpacing
+import com.calorietrackercompose.core_ui.MediumGray
+import com.calorietrackercompose.core_ui.Orange
+import com.calorietrackercompose.core_ui.TextWhite
 
 private val DarkColorPalette = darkColors(
     primary = BrightGreen,
