@@ -26,20 +26,21 @@ import com.calorietrackercompose.core_ui.LocalSpacing
 @Composable
 fun AddButton(
     text: String,
-    onClink: () -> Unit,
+    onClick: () -> Unit,
     modifier: Modifier = Modifier,
     color: Color = MaterialTheme.colors.primary
 ) {
     val spacing = LocalSpacing.current
-    Row(modifier = modifier
-        .clip(RoundedCornerShape(100f))
-        .clickable { onClink }
-        .border(
-            width = 1.dp,
-            color = color,
-            shape = RoundedCornerShape(100f)
-        )
-        .padding(spacing.spaceMedium),
+    Row(
+        modifier = modifier
+            .clip(RoundedCornerShape(100f))
+            .clickable { onClick() }
+            .border(
+                width = 1.dp,
+                color = color,
+                shape = RoundedCornerShape(100f)
+            )
+            .padding(spacing.spaceMedium),
         horizontalArrangement = Arrangement.Center,
         verticalAlignment = Alignment.CenterVertically
     ) {
@@ -48,7 +49,7 @@ fun AddButton(
             contentDescription = stringResource(id = R.string.add),
             tint = color
         )
-        Spacer(modifier = modifier.width(spacing.spaceMedium))
+        Spacer(modifier = Modifier.width(spacing.spaceMedium))
         Text(
             text = text,
             style = MaterialTheme.typography.button,
